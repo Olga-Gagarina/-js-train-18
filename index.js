@@ -365,12 +365,13 @@ console.log(processData([1, "two", 3]));
  */
 function evaluateExpression(expression) {
   try{
-    const result = eval(expression)
-    return result;
+    const resultEval = eval(expression)
+    return resultEval;
   
   } catch (error) {
     const err = new EvalError(` is not a valid mathematical expression.`)
     console.log( err.name ,`:` ,err.message ) ;
+    
   }
 
   
